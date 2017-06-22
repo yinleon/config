@@ -1,0 +1,33 @@
+Host hpctunnel
+	HostName hpc2.nyu.edu
+	ForwardX11 yes
+	LocalForward 8025 dumbo.es.its.nyu.edu:22
+	LocalForward 8024 prince.hpc.nyu.edu:22
+        DynamicForward 8118
+	User rgd248
+
+Host dumbo-remote
+	HostName localhost
+	HostKeyAlias dumbo
+	Port 8025
+	ForwardX11 yes
+	User rgd248
+
+Host prince-remote
+	HostName localhost
+	Port 8024
+	ForwardX11 yes
+	User rgd248
+
+Host prince
+	HostName prince.hpc.nyu.edu
+	ForwardX11 yes
+	User rgd248
+
+Host dumbo
+	HostName dumbo.es.its.nyu.edu
+	ForwardX11 yes
+	User rgd248
+	DynamicForward 8080
+Host *
+	ServerAliveInterval 100
