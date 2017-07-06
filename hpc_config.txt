@@ -1,5 +1,5 @@
 Host hpctunnel
-	HostName hpc2.nyu.edu
+	HostName gw.hpc.nyu.edu
 	ForwardX11 yes
 	LocalForward 8025 dumbo.es.its.nyu.edu:22
 	LocalForward 8024 prince.hpc.nyu.edu:22
